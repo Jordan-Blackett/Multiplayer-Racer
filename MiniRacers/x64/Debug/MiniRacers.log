@@ -1,0 +1,7 @@
+﻿  BotRacer.cpp
+c:\users\jordan blackett\documents\visual studio 2017\projects\miniracers\miniracers\botracer.cpp(21): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+c:\users\jordan blackett\documents\visual studio 2017\projects\miniracers\miniracers\botracer.cpp(24): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\jordan blackett\documents\visual studio 2017\projects\miniracers\miniracers\botracer.cpp(25): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\jordan blackett\documents\visual studio 2017\projects\miniracers\miniracers\botracer.cpp(37): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  MiniRacers.vcxproj -> C:\Users\Jordan Blackett\documents\visual studio 2017\Projects\MiniRacers\x64\Debug\MiniRacers.exe
+  MiniRacers.vcxproj -> C:\Users\Jordan Blackett\documents\visual studio 2017\Projects\MiniRacers\x64\Debug\MiniRacers.pdb (Partial PDB)

@@ -1,0 +1,6 @@
+c:\users\jordan blackett\documents\visual studio 2017\Projects\RacerServer\RacerServer\bin\Debug\RacerServer.exe.config
+c:\users\jordan blackett\documents\visual studio 2017\Projects\RacerServer\RacerServer\bin\Debug\RacerServer.exe
+c:\users\jordan blackett\documents\visual studio 2017\Projects\RacerServer\RacerServer\bin\Debug\RacerServer.pdb
+c:\users\jordan blackett\documents\visual studio 2017\Projects\RacerServer\RacerServer\obj\Debug\RacerServer.csprojResolveAssemblyReference.cache
+c:\users\jordan blackett\documents\visual studio 2017\Projects\RacerServer\RacerServer\obj\Debug\RacerServer.exe
+c:\users\jordan blackett\documents\visual studio 2017\Projects\RacerServer\RacerServer\obj\Debug\RacerServer.pdb

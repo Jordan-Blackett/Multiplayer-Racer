@@ -1,7 +1,20 @@
-﻿  BotRacer.cpp
-c:\users\jordan blackett\documents\visual studio 2017\projects\miniracers\miniracers\botracer.cpp(21): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-c:\users\jordan blackett\documents\visual studio 2017\projects\miniracers\miniracers\botracer.cpp(24): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\users\jordan blackett\documents\visual studio 2017\projects\miniracers\miniracers\botracer.cpp(25): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\users\jordan blackett\documents\visual studio 2017\projects\miniracers\miniracers\botracer.cpp(37): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-  MiniRacers.vcxproj -> C:\Users\Jordan Blackett\documents\visual studio 2017\Projects\MiniRacers\x64\Debug\MiniRacers.exe
-  MiniRacers.vcxproj -> C:\Users\Jordan Blackett\documents\visual studio 2017\Projects\MiniRacers\x64\Debug\MiniRacers.pdb (Partial PDB)
+﻿  World.cpp
+c:\users\jordan blackett\documents\visual studio 2017\projects\racers\miniracers\camera.h(14): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\jordan blackett\documents\visual studio 2017\projects\racers\miniracers\world.cpp(64): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\jordan blackett\documents\visual studio 2017\projects\racers\miniracers\world.cpp(65): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  RacerEntity.cpp
+  Player.cpp
+c:\users\jordan blackett\documents\visual studio 2017\projects\racers\miniracers\player.cpp(35): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+c:\users\jordan blackett\documents\visual studio 2017\projects\racers\miniracers\player.cpp(140): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  main.cpp
+c:\users\jordan blackett\documents\visual studio 2017\projects\racers\miniracers\camera.h(14): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Camera.cpp
+c:\users\jordan blackett\documents\visual studio 2017\projects\racers\miniracers\camera.h(14): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  BotRacer.cpp
+c:\users\jordan blackett\documents\visual studio 2017\projects\racers\miniracers\botracer.cpp(21): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+c:\users\jordan blackett\documents\visual studio 2017\projects\racers\miniracers\botracer.cpp(24): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\jordan blackett\documents\visual studio 2017\projects\racers\miniracers\botracer.cpp(25): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\jordan blackett\documents\visual studio 2017\projects\racers\miniracers\botracer.cpp(37): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Generating Code...
+  MiniRacers.vcxproj -> C:\Users\Jordan Blackett\Documents\Visual Studio 2017\Projects\Racers\x64\Debug\MiniRacers.exe
+  MiniRacers.vcxproj -> C:\Users\Jordan Blackett\Documents\Visual Studio 2017\Projects\Racers\x64\Debug\MiniRacers.pdb (Partial PDB)

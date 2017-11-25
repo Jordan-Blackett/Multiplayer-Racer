@@ -18,6 +18,45 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FileManager.h" />
+    <ClInclude Include="GameScreen.h" />
+    <ClInclude Include="InputManager.h" />
+    <ClInclude Include="src\BotRacer.h" />
+    <ClInclude Include="src\Camera.h" />
+    <ClInclude Include="src\HUD.h" />
+    <ClInclude Include="src\Network.h" />
+    <ClInclude Include="src\Player.h" />
+    <ClInclude Include="src\RacerEntity.h" />
+    <ClInclude Include="src\Screen.h" />
+    <ClInclude Include="src\ScreenManager.h" />
+    <ClInclude Include="src\SplashScreen.h" />
+    <ClInclude Include="src\World.h" />
+    <ClInclude Include="TitleScreen.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FileManager.cpp" />
+    <ClCompile Include="GameScreen.cpp" />
+    <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="src\BotRacer.cpp" />
+    <ClCompile Include="src\Camera.cpp" />
+    <ClCompile Include="src\HUD.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Network.cpp" />
+    <ClCompile Include="src\Player.cpp" />
+    <ClCompile Include="src\RacerEntity.cpp" />
+    <ClCompile Include="src\Screen.cpp" />
+    <ClCompile Include="src\ScreenManager.cpp" />
+    <ClCompile Include="src\SplashScreen.cpp" />
+    <ClCompile Include="src\World.cpp" />
+    <ClCompile Include="TitleScreen.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\background.png" />
+    <Image Include="Resources\BackgroundTest.png" />
+    <Image Include="Resources\car.png" />
+    <Image Include="Resources\racer_test.png" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{FA9B07FC-E638-4A9B-A97B-6FFF7AC0B3F1}</ProjectGuid>
@@ -116,23 +155,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="BotRacer.h" />
-    <ClInclude Include="Camera.h" />
-    <ClInclude Include="Network.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="RacerEntity.h" />
-    <ClInclude Include="World.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="BotRacer.cpp" />
-    <ClCompile Include="Camera.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Network.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="RacerEntity.cpp" />
-    <ClCompile Include="World.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

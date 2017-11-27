@@ -20,7 +20,7 @@ public:
 
 	void Initialize();
 	void LoadContent();
-	void Update();
+	void Update(sf::RenderWindow &Window);
 	void Draw(sf::RenderWindow &Window);
 
 	void AddScreen(Screen *screen);

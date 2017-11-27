@@ -21,7 +21,7 @@ void Screen::UnloadContent()
 
 }
 
-void Screen::Update()
+void Screen::Update(sf::RenderWindow &Window)
 {
 	
 }

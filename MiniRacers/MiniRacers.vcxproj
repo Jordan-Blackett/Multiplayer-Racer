@@ -22,6 +22,7 @@
     <ClInclude Include="FileManager.h" />
     <ClInclude Include="GameScreen.h" />
     <ClInclude Include="InputManager.h" />
+    <ClInclude Include="MessageManager.h" />
     <ClInclude Include="src\BotRacer.h" />
     <ClInclude Include="src\Camera.h" />
     <ClInclude Include="src\HUD.h" />
@@ -33,11 +34,13 @@
     <ClInclude Include="src\SplashScreen.h" />
     <ClInclude Include="src\World.h" />
     <ClInclude Include="TitleScreen.h" />
+    <ClInclude Include="UIManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FileManager.cpp" />
     <ClCompile Include="GameScreen.cpp" />
     <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="MessageManager.cpp" />
     <ClCompile Include="src\BotRacer.cpp" />
     <ClCompile Include="src\Camera.cpp" />
     <ClCompile Include="src\HUD.cpp" />
@@ -50,6 +53,7 @@
     <ClCompile Include="src\SplashScreen.cpp" />
     <ClCompile Include="src\World.cpp" />
     <ClCompile Include="TitleScreen.cpp" />
+    <ClCompile Include="UIManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\background.png" />

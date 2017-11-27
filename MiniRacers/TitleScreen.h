@@ -10,11 +10,14 @@ public:
 
 	void LoadContent();
 	void UnloadContent();
-	void Update(sf::Keyboard::Key key);
+	void Update(sf::RenderWindow &Window);
 	void Draw(sf::RenderWindow &Window);
 
 private:
 	sf::Text text;
 	sf::Font font;
+
+	//Buttons
+	Button startBtn;
 };
 

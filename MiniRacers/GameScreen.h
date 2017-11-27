@@ -7,6 +7,10 @@
 #include "src/Camera.h"
 #include "src/HUD.h"
 
+#include "MessageManager.h"
+
+#include <unordered_map>
+
 class GameScreen : public Screen
 {
 public:
@@ -28,6 +32,7 @@ private:
 
 	Camera camera;
 	HUD hud;
-
+	
+	std::unordered_map<std::string, RacerEntity> networkPlayers; //get from lobby
 };
 

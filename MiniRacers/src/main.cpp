@@ -41,8 +41,8 @@ int main()
             if (event.type == sf::Event::Closed)
                 window.close();
 
-			if (event.key.code == sf::Keyboard::S)
-				ScreenManager::GetInstance()->AddScreen(new GameScreen);
+			//if (event.key.code == sf::Keyboard::S)
+				//ScreenManager::GetInstance()->AddScreen(new GameScreen);
         }
         //
         // DEBUG INPUT
@@ -66,7 +66,7 @@ int main()
         wasButtonPressed = isButtonPressed;
         //
 		
-		ScreenManager::GetInstance()->Update();
+		ScreenManager::GetInstance()->Update(window);
 
         window.clear();
 		ScreenManager::GetInstance()->Draw(window);

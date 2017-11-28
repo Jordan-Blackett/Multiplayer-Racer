@@ -1,6 +1,7 @@
 #pragma once
 
 #include "src/Screen.h"
+#include "src/ScreenManager.h"
 
 class TitleScreen : public Screen
 {

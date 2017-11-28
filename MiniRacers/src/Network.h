@@ -24,6 +24,15 @@ public:
 	void UDP_Receive();
 	void UDP_Send(std::string buffer_out);
 
+	//
+	void SetIPAddress(std::string ip) { recipient = ip; }
+	void SetTCPPort(std::string port) { TCP_port = atoi(port.c_str()); }
+	void SetLocalUsername(std::string name) { local_username = name; }
+
+	//
+	bool GetIsConnected() { return isConnected; }
+	std::string GetStatus() { return statusTxt; }
+
 private:
 	sf::TcpSocket tcp_socket;
 	sf::UdpSocket udp_socket;
@@ -43,6 +52,7 @@ private:
 	//// Other
 	bool isConnected{ false };
 	bool isRegistered{ false };
+	std::string statusTxt{ "Connecting" };
 
 };
 

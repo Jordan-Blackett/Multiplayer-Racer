@@ -29,7 +29,7 @@ ScreenManager::~ScreenManager()
 
 void ScreenManager::Initialize()
 {
-	currentScreen = new JoinLobbyScreen();
+	currentScreen = new TitleScreen();
 }
 
 void ScreenManager::LoadContent()

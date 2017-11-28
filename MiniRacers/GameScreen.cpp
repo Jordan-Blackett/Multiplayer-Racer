@@ -36,7 +36,7 @@ void GameScreen::LoadContent()
 	hud.Initialization(sf::Vector2f(500,500));
 
 	// UI
-	txtBox.init(sf::Vector2i(25, 600), sf::Vector2i(100, 24), 12);
+	txtBox.init(sf::Vector2i(25, 600), sf::Vector2i(100, 24), "blah", 12);
 }
 
 void GameScreen::UnloadContent()

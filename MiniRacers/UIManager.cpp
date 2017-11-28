@@ -18,7 +18,7 @@ void Button::init(sf::Vector2i btnPos, std::string btnString)
 	if (!btnTexture.loadFromFile(btnString)) {}
 
 	btnSprite.setTexture(btnTexture);
-	btnSprite.setPosition(sf::Vector2f(btnPosition));
+	btnSprite.setPosition(sf::Vector2f((btnPosition.x - (btnTexture.getSize().x/2)), btnPosition.y));
 
 	// Btn Rect
 	btnRect = sf::IntRect(btnPosition, sf::Vector2i(btnTexture.getSize().x, btnTexture.getSize().y));
@@ -37,7 +37,26 @@ void Button::render(sf::RenderWindow &Window)
 	Window.draw(btnSprite);
 }
 
-void TextBox::init(sf::Vector2i pos, sf::Vector2i size, int fontSize)
+void Text::init(sf::Vector2i pos, sf::Vector2i size, std::string inittext, int fontSize)
+{
+	txtPosition = pos;
+
+	if (!font.loadFromFile("Resources/Font/Games.ttf"))
+		std::cout << "Title Screen: Cound not load font" << std::endl;
+
+	txt.setFont(font);
+	txt.setString(inittext);
+	txt.setCharacterSize(fontSize);
+
+	txt.setPosition(sf::Vector2f(txtPosition));
+}
+
+void Text::render(sf::RenderWindow & Window)
+{
+	Window.draw(txt);
+}
+
+void TextBox::init(sf::Vector2i pos, sf::Vector2i size, std::string inittext, int fontSize)
 {
 	txtPosition = pos;
 	
@@ -45,7 +64,8 @@ void TextBox::init(sf::Vector2i pos, sf::Vector2i size, int fontSize)
 		std::cout << "Title Screen: Cound not load font" << std::endl;
 
 	txt.setFont(font);
-	txt.setString("");
+	txt.setString(text);
+	text = inittext;
 	txt.setCharacterSize(fontSize);
 
 	txt.setPosition(sf::Vector2f(txtPosition));
@@ -74,22 +94,16 @@ void TextBox::IsClicked(sf::Vector2i mousePos)
 
 void TextBox::inputText(sf::RenderWindow &Window, sf::Event &event)
 {
-	//if (sf::Keyboard::isKeyPressed(sf::Keyboard::T))
-	//{
-	//	active = true;
-	//}
-
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Return))
-	{
-		if (active) {
-			//text.clear();
-			active = false;
-			txtBox.setFillColor(notActiveColor);
-		}
-	}
-
 	if (active) {
 		while (Window.pollEvent(event)) {
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Return))
+			{
+				if (active) {
+					//text.clear();
+					active = false;
+					txtBox.setFillColor(notActiveColor);
+				}
+			}
 			//if (event.type == sf::Event::KeyPressed)
 			//{
 			//	if (event.key.code == sf::Keyboard::Return) 
@@ -101,14 +115,16 @@ void TextBox::inputText(sf::RenderWindow &Window, sf::Event &event)
 			//}
 				
 			if (event.type == sf::Event::TextEntered) {
-				if (event.KeyPressed == sf::Keyboard::BackSpace && text.size() != 0) {
+				if (sf::Keyboard::isKeyPressed(sf::Keyboard::BackSpace) && text.size() != 0)
+				{
 					text.pop_back();
-					//std::cout << text << std::endl;
-				}
-				else if (event.text.unicode < 128) {
+				} else if (event.text.unicode < 128) {
 					text.push_back((char)event.text.unicode);
-					//std::cout << text << std::endl;
 				}
+
+				//if (event.type == sf::Keyboard::BackSpace && text.size() != 0) {
+				//	text.pop_back();
+				//}
 			}
 		}
 	}
@@ -123,3 +139,41 @@ void TextBox::render(sf::RenderWindow & Window)
 		Window.draw(txt);
 	//}
 }
+
+void PopUpBox::init(sf::Vector2i pos, sf::Vector2i size, int fontSize)
+{
+	txtPosition = pos;
+
+	if (!font.loadFromFile("Resources/Font/Games.ttf"))
+		std::cout << "Title Screen: Cound not load font" << std::endl;
+
+	txt.setFont(font);
+	txt.setString("");
+	txt.setCharacterSize(fontSize);
+
+	txt.setPosition(sf::Vector2f(txtPosition));
+
+	//txtBox.setFillColor(notActiveColor);
+	txtBox.setSize(sf::Vector2f(size));
+	txtBox.setPosition(sf::Vector2f(txtPosition));
+}
+
+void PopUpBox::setText(std::string text)
+{
+	txt.setString(text);
+}
+
+void PopUpBox::setActive(bool setActive)
+{
+	active = setActive;
+}
+
+void PopUpBox::render(sf::RenderWindow & Window)
+{
+	if (active)
+	{
+		//Window.draw(txtBox);
+		Window.draw(txt);
+	}
+}
+

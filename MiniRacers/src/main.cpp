@@ -15,7 +15,7 @@
 int main()
 {
     sf::Vector2f screenDimensions(1024, 768);
-    sf::RenderWindow window(sf::VideoMode(screenDimensions.x, screenDimensions.y), "Fire Race Of Death!"); //1280,1024
+    sf::RenderWindow window(sf::VideoMode(ScreenWidth, ScreenHeight), "Race!"); //1280,1024
 	window.setFramerateLimit(60);
 
 	// ScreenManager

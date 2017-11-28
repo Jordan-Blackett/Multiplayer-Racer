@@ -1,6 +1,7 @@
 #pragma once
 
 #include "src/Screen.h"
+#include "src/ScreenManager.h"
 
 class JoinLobbyScreen : public Screen
 {
@@ -26,9 +27,16 @@ private:
 
 	// Join
 	Text joinIpAddressTxt;
+	Text joinPortTxt;
+	Text joinUsernameTxt;
 	TextBox joinIpAddressTxtBox;
 	TextBox joinPortTxtBox;
 	TextBox joinUsernameTxtBox;
+
+	PopUpBox joinIpAddressPopUp;
+
+	bool popUpActive{ false };
+	bool connecting{ false };
 
 };
 

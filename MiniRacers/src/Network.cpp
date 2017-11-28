@@ -12,7 +12,7 @@ Network::~Network()
 }
 
 void Network::Init() {
-	std::cout << "Network Init - IP: " << rec << " Port: " << TCP_port << std::endl;
+	std::cout << "Network Init - IP: " << recipient << " Port: " << TCP_port << std::endl;
 	//recipient = rec;
 	TCP_Init();
 }
@@ -20,18 +20,21 @@ void Network::Init() {
 void Network::TCP_Init() {
 	//while (!isConnected)
 	//{
+		statusTxt = "Connecting";
 		// TCP socket
 		sf::Socket::Status status = tcp_socket.connect(recipient, TCP_port);
 		if (status != sf::Socket::Done) {
 			// Error
 			std::cerr << "TCP: Connect Failed\n";
+			statusTxt = "Connection Failed";
 		} else {
 			// Connect Successful
 			std::cout << "TCP: Connect Successful" << std::endl;
 			isConnected = true;
+			statusTxt = "Connected";
 
-			tcp_receive = std::thread(&Network::TCP_Receive, this);
-			Register();
+			//tcp_receive = std::thread(&Network::TCP_Receive, this);
+			//Register();
 
 			//udp_receive = std::thread(&Network::UDP_Receive, this);
 		}

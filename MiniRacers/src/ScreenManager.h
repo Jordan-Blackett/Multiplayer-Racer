@@ -10,6 +10,9 @@
 #include "../GameScreen.h"
 #include "../JoinLobbyScreen.h"
 
+#define ScreenWidth 1024
+#define ScreenHeight 768
+
 class ScreenManager
 {
 public:

@@ -13,120 +13,126 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\Screen">
-      <UniqueIdentifier>{4c822cf6-fab9-457e-9ebb-f66a02b32ed3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Entities">
+    <Filter Include="Source Files\Entities">
       <UniqueIdentifier>{a8c2b07b-9386-49bc-9dc0-8f49b14cae52}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Screen">
+      <UniqueIdentifier>{4c822cf6-fab9-457e-9ebb-f66a02b32ed3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Camera.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\HUD.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Network.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\World.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="InputManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FileManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="UIManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MessageManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="GameScreen.h">
-      <Filter>Header Files\Screen</Filter>
+      <Filter>Source Files\Screen</Filter>
     </ClInclude>
     <ClInclude Include="TitleScreen.h">
-      <Filter>Header Files\Screen</Filter>
+      <Filter>Source Files\Screen</Filter>
     </ClInclude>
     <ClInclude Include="src\SplashScreen.h">
-      <Filter>Header Files\Screen</Filter>
+      <Filter>Source Files\Screen</Filter>
     </ClInclude>
     <ClInclude Include="JoinLobbyScreen.h">
-      <Filter>Header Files\Screen</Filter>
+      <Filter>Source Files\Screen</Filter>
     </ClInclude>
     <ClInclude Include="src\ScreenManager.h">
-      <Filter>Header Files\Screen</Filter>
-    </ClInclude>
-    <ClInclude Include="src\BotRacer.h">
-      <Filter>Header Files\Entities</Filter>
-    </ClInclude>
-    <ClInclude Include="src\RacerEntity.h">
-      <Filter>Header Files\Entities</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Player.h">
-      <Filter>Header Files\Entities</Filter>
+      <Filter>Source Files\Screen</Filter>
     </ClInclude>
     <ClInclude Include="src\Screen.h">
-      <Filter>Header Files\Screen</Filter>
+      <Filter>Source Files\Screen</Filter>
+    </ClInclude>
+    <ClInclude Include="Lobby.h">
+      <Filter>Source Files\Screen</Filter>
+    </ClInclude>
+    <ClInclude Include="src\World.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Camera.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FileManager.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HUD.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MessageManager.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Network.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UIManager.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Player.h">
+      <Filter>Source Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RacerEntity.h">
+      <Filter>Source Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BotRacer.h">
+      <Filter>Source Files\Entities</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\BotRacer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Camera.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\HUD.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Network.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Player.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\RacerEntity.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\World.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ScreenManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\SplashScreen.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TitleScreen.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="InputManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Screen.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Lobby.cpp">
+      <Filter>Source Files\Screen</Filter>
     </ClCompile>
     <ClCompile Include="GameScreen.cpp">
+      <Filter>Source Files\Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="JoinLobbyScreen.cpp">
+      <Filter>Source Files\Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SplashScreen.cpp">
+      <Filter>Source Files\Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleScreen.cpp">
+      <Filter>Source Files\Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Screen.cpp">
+      <Filter>Source Files\Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ScreenManager.cpp">
+      <Filter>Source Files\Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="FileManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UIManager.cpp">
+    <ClCompile Include="src\HUD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MessageManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="JoinLobbyScreen.cpp">
+    <ClCompile Include="src\Network.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UIManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\World.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Player.cpp">
+      <Filter>Source Files\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RacerEntity.cpp">
+      <Filter>Source Files\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BotRacer.cpp">
+      <Filter>Source Files\Entities</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

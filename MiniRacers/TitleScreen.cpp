@@ -35,7 +35,7 @@ void TitleScreen::Update(sf::RenderWindow &Window)
 		sf::Vector2i position = sf::Mouse::getPosition(Window);
 		if (startBtn.IsClicked(position))
 		{
-			//ScreenManager::GetInstance()->AddScreen(new GameScreen);
+			ScreenManager::GetInstance()->AddScreen(new JoinLobbyScreen);
 		}
 	}
 }

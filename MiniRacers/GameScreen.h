@@ -9,8 +9,6 @@
 
 #include "MessageManager.h"
 
-#include "src/Network.h"
-
 #include <unordered_map>
 
 class GameScreen : public Screen
@@ -38,8 +36,6 @@ private:
 	
 	//std::unordered_map<std::string, RacerEntity> networkPlayers; //get from lobby
 
-	// TCP & UDP Threads
-	Network network;
 	bool wasButtonPressed = false;
 
 	// UI

@@ -3,7 +3,7 @@
 #include <SFML\Graphics.hpp>
 #include <iostream>
 
-//#include "ScreenManager.h"
+#include "Network.h"
 #include "../UIManager.h"
 
 class Screen
@@ -19,6 +19,7 @@ public:
 	virtual void Draw(sf::RenderWindow &Window);
 protected:
 	UIManager ui;
+	Network network;
 private:
 };
 

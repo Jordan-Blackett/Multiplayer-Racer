@@ -23,6 +23,7 @@
     <ClInclude Include="GameScreen.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="JoinLobbyScreen.h" />
+    <ClInclude Include="Lobby.h" />
     <ClInclude Include="MessageManager.h" />
     <ClInclude Include="src\BotRacer.h" />
     <ClInclude Include="src\Camera.h" />
@@ -42,6 +43,7 @@
     <ClCompile Include="GameScreen.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="JoinLobbyScreen.cpp" />
+    <ClCompile Include="Lobby.cpp" />
     <ClCompile Include="MessageManager.cpp" />
     <ClCompile Include="src\BotRacer.cpp" />
     <ClCompile Include="src\Camera.cpp" />

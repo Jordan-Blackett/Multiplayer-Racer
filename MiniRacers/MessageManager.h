@@ -1,6 +1,7 @@
 #pragma once
 
 #include <vector>
+#include <string>
 
 //class MessageManager
 //{
@@ -17,7 +18,16 @@ struct VectorMessage
 	float y1;
 	float y2;
 };
+
+struct positionMessage
+{
+	std::string username;
+	float posX;
+	float posY;
+};
+
 class VectorListener;
+
 class VectorSender
 {
 public:
@@ -25,6 +35,7 @@ public:
 	~VectorSender();
 
 	void SendMessage(float x1, float y1, float x2, float y2);
+	void SendMessage(std::string name, float x2, float y2);
 	void recieveListener(VectorListener * listener);
 
 private:

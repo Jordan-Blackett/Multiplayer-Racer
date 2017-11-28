@@ -13,7 +13,7 @@ Network::~Network()
 
 void Network::Init() {
 	std::cout << "Network Init - IP: " << rec << " Port: " << TCP_port << std::endl;
-	recipient = rec;
+	//recipient = rec;
 	TCP_Init();
 }
 
@@ -31,9 +31,17 @@ void Network::TCP_Init() {
 			isConnected = true;
 
 			tcp_receive = std::thread(&Network::TCP_Receive, this);
-			udp_receive = std::thread(&Network::UDP_Receive, this);
+			Register();
+
+			//udp_receive = std::thread(&Network::UDP_Receive, this);
 		}
 	//}
+}
+
+void Network::Register() {
+	std::string buffer_out = "register::" + local_username;
+	TCP_Send(buffer_out);
+	std::cout << "Network: Register " + local_username << std::endl;
 }
 
 void Network::TCP_Receive() {
@@ -63,6 +71,7 @@ void Network::TCP_Receive() {
 		}
 	}
 }
+
 
 void Network::TCP_Send(std::string buffer_out) {
 	// TCP socket send

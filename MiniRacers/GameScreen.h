@@ -9,6 +9,8 @@
 
 #include "MessageManager.h"
 
+#include "src/Network.h"
+
 #include <unordered_map>
 
 class GameScreen : public Screen
@@ -19,7 +21,7 @@ public:
 
 	void LoadContent();
 	void UnloadContent();
-	void Update();
+	void Update(sf::RenderWindow &Window);
 	void Draw(sf::RenderWindow &Window);
 
 private:
@@ -33,6 +35,10 @@ private:
 	Camera camera;
 	HUD hud;
 	
-	std::unordered_map<std::string, RacerEntity> networkPlayers; //get from lobby
+	//std::unordered_map<std::string, RacerEntity> networkPlayers; //get from lobby
+
+	// TCP & UDP Threads
+	Network network;
+	bool wasButtonPressed = false;
 };
 

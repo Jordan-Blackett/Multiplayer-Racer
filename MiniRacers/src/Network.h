@@ -11,6 +11,7 @@ public:
 	~Network();
 
 	void Init(); // Connect
+	void Register();
 
 	// TCP
 	void TCP_Init(); // TCP Connect
@@ -30,18 +31,18 @@ private:
 	std::thread tcp_receive;
 	std::thread udp_receive;
 
-	sf::IpAddress recipient = "127.0.0.1";
+	sf::IpAddress recipient = "192.168.0.10";
 	sf::IpAddress rec = sf::IpAddress::getLocalAddress();
 	unsigned short TCP_port = 8080;
 	unsigned short UDP_port = 8080;
 
-	//// Players
-	////std::string local_username{ "batman" };
+	// Players
+	std::string local_username{ "batman" };
 	////OnlineData* onlinedata{ nullptr };
 
 	//// Other
 	bool isConnected{ false };
-	////bool registered{ false };
+	bool isRegistered{ false };
 
 };
 

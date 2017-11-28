@@ -23,6 +23,9 @@ void GameScreen::LoadContent()
 	backgroundImage.setScale(2, 2);
 
 	// Entities - Start Location
+
+	//networkgamescreen and gamescreen
+	//number of players number of bots
 	player_1.Initialization(sf::Vector2f(500, 500));
 
 	BotRacer* bot1 = new BotRacer();
@@ -38,8 +41,11 @@ void GameScreen::UnloadContent()
 
 }
 
-void GameScreen::Update()
+void GameScreen::Update(sf::RenderWindow &Window)
 {
+	// Get pos loop though number of playersS
+	//
+
 	// Player Input
 	player_1.PlayerInput();
 
@@ -55,6 +61,27 @@ void GameScreen::Update()
 	if (player_1.getPosition().y > (768 / 2)) camera.setOffset(camera.getOffset().x, player_1.getPosition().y - (768 / 2));
 
 	hud.UpdateHUD();
+	
+	// DEBUG INPUT
+	bool isButtonPressed = sf::Keyboard::isKeyPressed(sf::Keyboard::C)
+		|| sf::Keyboard::isKeyPressed(sf::Keyboard::H)
+		|| sf::Keyboard::isKeyPressed(sf::Keyboard::J);
+
+	//once
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::C) && !wasButtonPressed) {
+		network.Init();
+	}
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::H) && !wasButtonPressed) {
+		network.TCP_Send("hello::<EOF>");
+	}
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::J) && !wasButtonPressed) {
+		network.UDP_Send("hello");
+	}
+
+	wasButtonPressed = isButtonPressed;
+	//
 }
 
 void GameScreen::Draw(sf::RenderWindow &Window)

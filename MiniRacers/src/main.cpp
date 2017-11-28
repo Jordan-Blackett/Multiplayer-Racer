@@ -19,21 +19,8 @@ int main()
 	window.setFramerateLimit(60);
 
 	// ScreenManager
-	ScreenManager::GetInstance()->SetText("hello");
-	ScreenManager::GetInstance()->DrawText();
-	//
-
 	ScreenManager::GetInstance()->Initialize();
-	ScreenManager::GetInstance()->LoadContent();
-
-
-	// World
-	//World world;
-	//world.Initialization(&window, screenDimensions);
-                         
-    // TCP & UDP Threads
-    Network network;
-    bool wasButtonPressed = false;
+	ScreenManager::GetInstance()->LoadContent();               
 
     while (window.isOpen()) {
         sf::Event event;
@@ -41,33 +28,14 @@ int main()
             if (event.type == sf::Event::Closed)
                 window.close();
 
-			//if (event.key.code == sf::Keyboard::S)
-				//ScreenManager::GetInstance()->AddScreen(new GameScreen);
+			if (event.key.code == sf::Keyboard::P)
+				ScreenManager::GetInstance()->AddScreen(new GameScreen);
         }
-        //
-        // DEBUG INPUT
-        bool isButtonPressed = sf::Keyboard::isKeyPressed(sf::Keyboard::C)
-        || sf::Keyboard::isKeyPressed(sf::Keyboard::H)
-		|| sf::Keyboard::isKeyPressed(sf::Keyboard::J);
-        
-        //once
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::C) && !wasButtonPressed) {
-            network.Init();
-        }
-        
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::H) && !wasButtonPressed) {
-            network.TCP_Send("hello::<EOF>");
-        }
-
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::J) && !wasButtonPressed) {
-			network.UDP_Send("hello");
-		}
-        
-        wasButtonPressed = isButtonPressed;
-        //
 		
+		// Update World
 		ScreenManager::GetInstance()->Update(window);
 
+		// Render World
         window.clear();
 		ScreenManager::GetInstance()->Draw(window);
         window.display();

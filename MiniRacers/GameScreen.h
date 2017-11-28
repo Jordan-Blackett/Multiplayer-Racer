@@ -22,6 +22,7 @@ public:
 	void LoadContent();
 	void UnloadContent();
 	void Update(sf::RenderWindow &Window);
+	void UIUpdate(sf::RenderWindow &Window, sf::Event &event);
 	void Draw(sf::RenderWindow &Window);
 
 private:
@@ -40,5 +41,8 @@ private:
 	// TCP & UDP Threads
 	Network network;
 	bool wasButtonPressed = false;
+
+	// UI
+	TextBox txtBox;
 };
 

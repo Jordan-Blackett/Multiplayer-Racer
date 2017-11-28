@@ -34,6 +34,9 @@ void GameScreen::LoadContent()
 
 	// HUD - Set screenDimensions screenmanager->getscreenDimensions
 	hud.Initialization(sf::Vector2f(500,500));
+
+	// UI
+	txtBox.init(sf::Vector2i(25, 600), sf::Vector2i(100, 24), 12);
 }
 
 void GameScreen::UnloadContent()
@@ -63,25 +66,44 @@ void GameScreen::Update(sf::RenderWindow &Window)
 	hud.UpdateHUD();
 	
 	// DEBUG INPUT
-	bool isButtonPressed = sf::Keyboard::isKeyPressed(sf::Keyboard::C)
-		|| sf::Keyboard::isKeyPressed(sf::Keyboard::H)
-		|| sf::Keyboard::isKeyPressed(sf::Keyboard::J);
+	//bool isButtonPressed = sf::Keyboard::isKeyPressed(sf::Keyboard::C)
+	//	|| sf::Keyboard::isKeyPressed(sf::Keyboard::H)
+	//	|| sf::Keyboard::isKeyPressed(sf::Keyboard::J);
 
-	//once
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::C) && !wasButtonPressed) {
-		network.Init();
-	}
+	////once
+	//if (sf::Keyboard::isKeyPressed(sf::Keyboard::C) && !wasButtonPressed) {
+	//	network.Init();
+	//}
 
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::H) && !wasButtonPressed) {
-		network.TCP_Send("hello::<EOF>");
-	}
+	//if (sf::Keyboard::isKeyPressed(sf::Keyboard::H) && !wasButtonPressed) {
+	//	network.TCP_Send("hello::<EOF>");
+	//}
 
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::J) && !wasButtonPressed) {
-		network.UDP_Send("hello");
-	}
+	//if (sf::Keyboard::isKeyPressed(sf::Keyboard::J) && !wasButtonPressed) {
+	//	network.UDP_Send("hello");
+	//}
 
-	wasButtonPressed = isButtonPressed;
+	//wasButtonPressed = isButtonPressed;
 	//
+
+
+}
+
+void GameScreen::UIUpdate(sf::RenderWindow &Window, sf::Event &event)
+{
+	// UI
+
+	// Buttons
+
+
+	// Text Boxes
+	if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+	{
+		sf::Vector2i position = sf::Mouse::getPosition(Window);
+		txtBox.IsClicked(position);
+	}
+
+	txtBox.inputText(Window, event);
 }
 
 void GameScreen::Draw(sf::RenderWindow &Window)
@@ -96,5 +118,8 @@ void GameScreen::Draw(sf::RenderWindow &Window)
 	backgroundImage.setPosition(-camera.getOffset());
 
 	hud.RenderHUD(Window, camera.getOffset());
+
+	// UI
+	txtBox.render(Window);
 }
 

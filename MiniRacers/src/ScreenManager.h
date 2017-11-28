@@ -8,6 +8,7 @@
 #include "SplashScreen.h"
 #include "../TitleScreen.h"
 #include "../GameScreen.h"
+#include "../JoinLobbyScreen.h"
 
 class ScreenManager
 {
@@ -21,6 +22,7 @@ public:
 	void Initialize();
 	void LoadContent();
 	void Update(sf::RenderWindow &Window);
+	void UIUpdate(sf::RenderWindow &Window, sf::Event &event);
 	void Draw(sf::RenderWindow &Window);
 
 	void AddScreen(Screen *screen);

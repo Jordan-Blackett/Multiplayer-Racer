@@ -21,7 +21,7 @@ int main()
 	// ScreenManager
 	ScreenManager::GetInstance()->Initialize();
 	ScreenManager::GetInstance()->LoadContent();               
-
+	std::string s;
     while (window.isOpen()) {
         sf::Event event;
         while (window.pollEvent(event)) {
@@ -30,6 +30,8 @@ int main()
 
 			if (event.key.code == sf::Keyboard::P)
 				ScreenManager::GetInstance()->AddScreen(new GameScreen);
+
+			ScreenManager::GetInstance()->UIUpdate(window, event);
         }
 		
 		// Update World

@@ -26,6 +26,11 @@ void Screen::Update(sf::RenderWindow &Window)
 	
 }
 
+void Screen::UIUpdate(sf::RenderWindow &Window, sf::Event &event)
+{
+
+}
+
 void Screen::Draw(sf::RenderWindow &Window)
 {
 

@@ -10,3 +10,7 @@ C:\Users\Jordan Blackett\Documents\Visual Studio 2017\Projects\Racers\RacerServe
 C:\Users\Jordan Blackett\Documents\Visual Studio 2017\Projects\Racers\RacerServer\RacerServer\obj\Debug\RacerServer.csprojResolveAssemblyReference.cache
 C:\Users\Jordan Blackett\Documents\Visual Studio 2017\Projects\Racers\RacerServer\RacerServer\obj\Debug\RacerServer.exe
 C:\Users\Jordan Blackett\Documents\Visual Studio 2017\Projects\Racers\RacerServer\RacerServer\obj\Debug\RacerServer.pdb
+C:\Users\Jordan Blackett\Documents\Visual Studio 2017\Projects\Racers\RacerServer\RacerServer\bin\Debug\Google.Protobuf.dll
+C:\Users\Jordan Blackett\Documents\Visual Studio 2017\Projects\Racers\RacerServer\RacerServer\bin\Debug\Google.Protobuf.xml
+C:\Users\Jordan Blackett\Documents\Visual Studio 2017\Projects\Racers\RacerServer\RacerServer\bin\Debug\protobuf-net.dll
+C:\Users\Jordan Blackett\Documents\Visual Studio 2017\Projects\Racers\RacerServer\RacerServer\bin\Debug\protobuf-net.xml

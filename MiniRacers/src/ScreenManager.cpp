@@ -29,7 +29,7 @@ ScreenManager::~ScreenManager()
 
 void ScreenManager::Initialize()
 {
-	currentScreen = new TitleScreen();
+	currentScreen = new JoinLobbyScreen();
 }
 
 void ScreenManager::LoadContent()
@@ -40,6 +40,11 @@ void ScreenManager::LoadContent()
 void ScreenManager::Update(sf::RenderWindow &Window)
 {
 	currentScreen->Update(Window);
+}
+
+void ScreenManager::UIUpdate(sf::RenderWindow & Window, sf::Event & event)
+{
+	currentScreen->UIUpdate(Window, event);
 }
 
 void ScreenManager::Draw(sf::RenderWindow &Window)

@@ -4,9 +4,46 @@ using System.Net.Sockets; // For TcpListener, TcpClient
 using System.Threading;
 using System.Text;
 using System.Collections.Generic;
+using Google.Protobuf;
+using ProtoBuf;
 
 namespace RacerServer
 {
+    // IDK
+    //syntax = "proto3";
+    //package tutorial;
+
+    ////syntax = "proto3";
+    ////package tutorial;
+
+    //message Person
+    // {
+    // //    //string name = 1;
+    // //    //int32 id = 2;  // Unique ID number for this person.
+    // //    //string email = 3;
+    // }
+
+    [ProtoContract]
+    class Client
+    {
+        [ProtoMember(1)]
+        public int Id { get; set; }
+        [ProtoMember(2)]
+        public string Name { get; set; }
+        [ProtoMember(3)]
+        public Address Address { get; set; }
+    }
+
+    [ProtoContract]
+    class Address
+    {
+        [ProtoMember(1)]
+        public string Line1 { get; set; }
+        [ProtoMember(2)]
+        public string Line2 { get; set; }
+    }
+
+    //
     // ----- TCP -----
 
     // State object for reading client data asynchronously  
@@ -129,11 +166,12 @@ namespace RacerServer
                         content.Length, content);
 
                     // -----
-                    //if (content == "reg")
-                    //{
-
-
-                    //}
+                    if (content == "Register")
+                    {
+                        //string username = "batman";
+                        //ClientObject client;
+                        //clients.Add(username, client);
+                    }
 
                     // -----
 

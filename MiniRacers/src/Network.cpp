@@ -1,7 +1,6 @@
 #include "Network.h"
 
 
-
 Network::Network()
 {
 }
@@ -33,7 +32,7 @@ void Network::TCP_Init() {
 			isConnected = true;
 			statusTxt = "Connected";
 
-			//tcp_receive = std::thread(&Network::TCP_Receive, this);
+			tcp_receive = std::thread(&Network::TCP_Receive, this);
 			//Register();
 
 			//udp_receive = std::thread(&Network::UDP_Receive, this);

@@ -5,10 +5,34 @@ using System.Threading;
 using System.Text;
 using System.Collections.Generic;
 using Google.Protobuf;
-using ProtoBuf;
+using Google.Protobuf.Examples.AddressBook;
+using static Google.Protobuf.Examples.AddressBook.Person.Types;
+//using Google.Protobuf.MessageExtensions;
+
+//namespace Google.Protobuf.Examples.AddressBook
+//{
+//    Person batman = new Person
+//    {
+//        Id = 1234,
+//        Name = "John Doe",
+//        Email = "jdoe@example.com",
+//        Phones = { new PhoneNumber { Number = "555-4321", Type = PhoneType.HOME } }
+//    };
+//}
 
 namespace RacerServer
 {
+    //Person batman = new Person
+    //{
+    //    //Id = 1234,
+    //    //Name = "John Doe",
+    //    //Email = "jdoe@example.com",
+    //    //Phones = { new Person.Types.PhoneNumber { Number = "555-4321", Type = Person.Types.PhoneType.HOME } }
+    //}
+
+
+
+
     // IDK
     //syntax = "proto3";
     //package tutorial;
@@ -17,33 +41,19 @@ namespace RacerServer
     ////package tutorial;
 
     //message Person
-    // {
-    // //    //string name = 1;
-    // //    //int32 id = 2;  // Unique ID number for this person.
-    // //    //string email = 3;
+    //// {
+    //// //    //string name = 1;
+    //// //    //int32 id = 2;  // Unique ID number for this person.
+    //// //    //string email = 3;
     // }
+    //Person john = new Person
+    //{
+    //    Id = 1234,
+    //    Name = "John Doe",
+    //    Email = "jdoe@example.com",
+    //    Phones = { new Person.Types.PhoneNumber { Number = "555-4321", Type = Person.Types.PhoneType.HOME } }
+    //};
 
-    [ProtoContract]
-    class Client
-    {
-        [ProtoMember(1)]
-        public int Id { get; set; }
-        [ProtoMember(2)]
-        public string Name { get; set; }
-        [ProtoMember(3)]
-        public Address Address { get; set; }
-    }
-
-    [ProtoContract]
-    class Address
-    {
-        [ProtoMember(1)]
-        public string Line1 { get; set; }
-        [ProtoMember(2)]
-        public string Line2 { get; set; }
-    }
-
-    //
     // ----- TCP -----
 
     // State object for reading client data asynchronously  
@@ -173,10 +183,29 @@ namespace RacerServer
                         //clients.Add(username, client);
                     }
 
+                    Position pos = new Position
+                    {
+                        Id = 1775,
+                        Username = "Batman",
+                        PosX = 100,
+                        PosY = 100
+                    };
+
+                    Person john = new Person
+                    {
+                        Id = 1234,
+                        Name = "John Doe",
+                        Email = "jdoe@example.com",
+                        Phones = { new Person.Types.PhoneNumber { Number = "555-4321", Type = Person.Types.PhoneType.Home } }
+                    };
+
+
+                    Send(handler, pos.ToString());
+
                     // -----
 
                     // Echo the data back to the client.  
-                    Send(handler, content);
+                    //Send(handler, content);
                 }
                 else
                 {
@@ -305,6 +334,16 @@ namespace RacerServer
 
         public static int Main(String[] args)
         {
+            //
+            Person john = new Person
+            {
+                Id = 1234,
+                Name = "John Doe",
+                Email = "jdoe@example.com",
+                Phones = { new Person.Types.PhoneNumber { Number = "555-4321", Type = Person.Types.PhoneType.Home } }
+            };
+            //
+
             StartListening();
             UDPReceiveMessages();
             return 0;

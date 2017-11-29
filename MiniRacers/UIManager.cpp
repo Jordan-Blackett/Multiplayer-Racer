@@ -21,7 +21,7 @@ void Button::init(sf::Vector2i btnPos, std::string btnString)
 	btnSprite.setPosition(sf::Vector2f((btnPosition.x - (btnTexture.getSize().x/2)), btnPosition.y));
 
 	// Btn Rect
-	btnRect = sf::IntRect(btnPosition, sf::Vector2i(btnTexture.getSize().x, btnTexture.getSize().y));
+	btnRect = sf::IntRect(sf::Vector2i(btnPosition.x - (btnTexture.getSize().x / 2), btnPosition.y), sf::Vector2i(btnTexture.getSize().x, btnTexture.getSize().y));
 }
 
 bool Button::IsClicked(sf::Vector2i mousePos)

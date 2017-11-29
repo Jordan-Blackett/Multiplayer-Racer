@@ -20,7 +20,7 @@ void JoinLobbyScreen::LoadContent()
 	backBtn.init(sf::Vector2i((ScreenWidth / 2), 600), "Resources/Button/Start.png");
 
 	// Join
-	joinIpAddressTxtBox.init(sf::Vector2i(400, 400), sf::Vector2i(150, 24), "127.0.0.1", 20);
+	joinIpAddressTxtBox.init(sf::Vector2i(400, 400), sf::Vector2i(150, 24), "192.168.0.10", 20);
 	joinPortTxtBox.init(sf::Vector2i(400, 450), sf::Vector2i(150, 24), "8080", 20);
 	joinUsernameTxtBox.init(sf::Vector2i(400, 500), sf::Vector2i(150, 24), "Player", 20);
 
@@ -51,7 +51,8 @@ void JoinLobbyScreen::UIUpdate(sf::RenderWindow & Window, sf::Event & event)
 		{
 			joinIpAddressPopUp.setText(network.GetStatus());
 			connecting = false;
-			ScreenManager::GetInstance()->AddScreen(new GameScreen);
+			//ScreenManager::GetInstance()->AddScreen(new GameScreen);
+			
 		}
 		if (status == "Connection Failed")
 		{
@@ -79,7 +80,8 @@ void JoinLobbyScreen::UIUpdate(sf::RenderWindow & Window, sf::Event & event)
 			}
 			if (backBtn.IsClicked(position))
 			{
-				ScreenManager::GetInstance()->AddScreen(new TitleScreen);
+				//ScreenManager::GetInstance()->AddScreen(new TitleScreen);
+				network.TCP_Send("hello::<EOF>");
 			}
 
 			// Text Boxes

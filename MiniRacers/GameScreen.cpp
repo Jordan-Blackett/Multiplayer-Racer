@@ -66,24 +66,24 @@ void GameScreen::Update(sf::RenderWindow &Window)
 	hud.UpdateHUD();
 	
 	// DEBUG INPUT
-	//bool isButtonPressed = sf::Keyboard::isKeyPressed(sf::Keyboard::C)
-	//	|| sf::Keyboard::isKeyPressed(sf::Keyboard::H)
-	//	|| sf::Keyboard::isKeyPressed(sf::Keyboard::J);
+	bool isButtonPressed = sf::Keyboard::isKeyPressed(sf::Keyboard::C)
+		|| sf::Keyboard::isKeyPressed(sf::Keyboard::H)
+		|| sf::Keyboard::isKeyPressed(sf::Keyboard::J);
 
 	////once
 	//if (sf::Keyboard::isKeyPressed(sf::Keyboard::C) && !wasButtonPressed) {
 	//	network.Init();
 	//}
 
-	//if (sf::Keyboard::isKeyPressed(sf::Keyboard::H) && !wasButtonPressed) {
-	//	network.TCP_Send("hello::<EOF>");
-	//}
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::H) && !wasButtonPressed) {
+		network.TCP_Send("hello::<EOF>");
+	}
 
 	//if (sf::Keyboard::isKeyPressed(sf::Keyboard::J) && !wasButtonPressed) {
 	//	network.UDP_Send("hello");
 	//}
 
-	//wasButtonPressed = isButtonPressed;
+	wasButtonPressed = isButtonPressed;
 	//
 
 

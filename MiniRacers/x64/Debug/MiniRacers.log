@@ -1,4 +1,4 @@
-﻿  ScreenManager.cpp
+﻿  JoinLobbyScreen.cpp
 c:\users\jordan blackett\documents\visual studio 2017\projects\racers\miniracers\src\camera.h(14): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
   MiniRacers.vcxproj -> C:\Users\Jordan Blackett\Documents\Visual Studio 2017\Projects\Racers\x64\Debug\MiniRacers.exe
   MiniRacers.vcxproj -> C:\Users\Jordan Blackett\Documents\Visual Studio 2017\Projects\Racers\x64\Debug\MiniRacers.pdb (Partial PDB)
